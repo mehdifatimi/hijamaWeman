@@ -96,7 +96,7 @@ export default function AboutPage() {
                                 Hijama Femmes est un centre de bien-être exclusivement réservé aux femmes, dédié à la pratique de la hijama thérapeutique dans un environnement bienveillant, respectueux et professionnel.
                             </p>
                             <p className="font-poppins text-lg text-gray-600 leading-relaxed">
-                                Notre mission est d'offrir aux femmes un espace où elles peuvent prendre soin de leur santé et de leur bien-être en toute confiance, dans le respect de leur intimité et de leurs besoins spécifiques.
+                                Notre mission est d&apos;offrir aux femmes un espace où elles peuvent prendre soin de leur santé et de leur bien-être en toute confiance, dans le respect de leur intimité et de leurs besoins spécifiques.
                             </p>
                         </motion.div>
                     </div>
@@ -119,7 +119,7 @@ export default function AboutPage() {
                             </h2>
                             <div className="w-20 h-1 bg-gradient-to-r from-gold-400 to-rose-400"></div>
                             <p className="font-poppins text-lg text-gray-600 leading-relaxed">
-                                Formée et certifiée en hijama thérapeutique, notre praticienne possède plusieurs années d'expérience dans l'accompagnement des femmes vers un mieux-être naturel.
+                                Formée et certifiée en hijama thérapeutique, notre praticienne possède plusieurs années d&apos;expérience dans l&apos;accompagnement des femmes vers un mieux-être naturel.
                             </p>
                             <p className="font-poppins text-lg text-gray-600 leading-relaxed">
                                 Passionnée par les médecines douces et le bien-être holistique, elle met son expertise au service de votre santé avec une approche personnalisée et respectueuse.
@@ -134,12 +134,12 @@ export default function AboutPage() {
                                 <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow">
                                     <Clock size={32} className="text-gold-500 mb-3" />
                                     <p className="font-poppins text-sm font-semibold text-gray-800 mb-1">5+ ans</p>
-                                    <p className="font-poppins text-xs text-gray-600">D'expérience</p>
+                                    <p className="font-poppins text-xs text-gray-600">D&apos;expérience</p>
                                 </div>
                                 <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow">
                                     <Heart size={32} className="text-gold-500 mb-3" />
                                     <p className="font-poppins text-sm font-semibold text-gray-800 mb-1">Bienveillante</p>
-                                    <p className="font-poppins text-xs text-gray-600">À l'écoute</p>
+                                    <p className="font-poppins text-xs text-gray-600">À l&apos;écoute</p>
                                 </div>
                             </div>
                         </motion.div>
@@ -225,7 +225,7 @@ export default function AboutPage() {
                             Prête à Commencer Votre Parcours de Bien-être ?
                         </h2>
                         <p className="font-poppins text-lg text-gray-600 max-w-2xl mx-auto">
-                            Prenez rendez-vous dès aujourd'hui et découvrez les bienfaits de la hijama dans un environnement bienveillant et professionnel.
+                            Prenez rendez-vous dès aujourd&apos;hui et découvrez les bienfaits de la hijama dans un environnement bienveillant et professionnel.
                         </p>
                         <Button href="/contact" variant="primary" className="px-12 py-4 text-lg">
                             Prendre Rendez-vous

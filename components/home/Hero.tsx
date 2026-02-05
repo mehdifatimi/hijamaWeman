@@ -59,7 +59,7 @@ export default function Hero() {
                         >
                             <div className="text-center lg:text-left">
                                 <div className="font-playfair text-3xl md:text-4xl font-bold text-rose-500">5+</div>
-                                <div className="font-poppins text-sm text-gray-600 mt-1">Ans d'expérience</div>
+                                <div className="font-poppins text-sm text-gray-600 mt-1">Ans d&apos;expérience</div>
                             </div>
                             <div className="text-center lg:text-left">
                                 <div className="font-playfair text-3xl md:text-4xl font-bold text-rose-500">100%</div>

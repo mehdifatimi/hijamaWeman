@@ -1,0 +1,25 @@
+
+Oops! Something went wrong! :(
+
+ESLint: 9.39.2
+
+TypeError: Converting circular structure to JSON
+    --> starting at object with constructor 'Object'
+    |     property 'configs' -> object with constructor 'Object'
+    |     property 'flat' -> object with constructor 'Object'
+    |     ...
+    |     property 'plugins' -> object with constructor 'Object'
+    --- property 'react' closes the circle
+Referenced from: C:\Users\pc\Desktop\hijamaWeman\.eslintrc.json
+    at JSON.stringify (<anonymous>)
+    at C:\Users\pc\Desktop\hijamaWeman\node_modules\@eslint\eslintrc\dist\eslintrc.cjs:2255:45
+    at Array.map (<anonymous>)
+    at ConfigValidator.formatErrors (C:\Users\pc\Desktop\hijamaWeman\node_modules\@eslint\eslintrc\dist\eslintrc.cjs:2246:23)
+    at ConfigValidator.validateConfigSchema (C:\Users\pc\Desktop\hijamaWeman\node_modules\@eslint\eslintrc\dist\eslintrc.cjs:2277:84)
+    at ConfigArrayFactory._normalizeConfigData (C:\Users\pc\Desktop\hijamaWeman\node_modules\@eslint\eslintrc\dist\eslintrc.cjs:3123:19)
+    at ConfigArrayFactory._loadConfigData (C:\Users\pc\Desktop\hijamaWeman\node_modules\@eslint\eslintrc\dist\eslintrc.cjs:3088:21)
+    at ConfigArrayFactory._loadExtendedShareableConfig (C:\Users\pc\Desktop\hijamaWeman\node_modules\@eslint\eslintrc\dist\eslintrc.cjs:3393:21)
+    at ConfigArrayFactory._loadExtends (C:\Users\pc\Desktop\hijamaWeman\node_modules\@eslint\eslintrc\dist\eslintrc.cjs:3261:25)
+    at ConfigArrayFactory._normalizeObjectConfigDataBody (C:\Users\pc\Desktop\hijamaWeman\node_modules\@eslint\eslintrc\dist\eslintrc.cjs:3199:25)
+(node:14636) ESLintRCWarning: You are using an eslintrc configuration file, which is deprecated and support will be removed in v10.0.0. Please migrate to an eslint.config.js file. See https://eslint.org/docs/latest/use/configure/migration-guide for details. An eslintrc configuration file is used because you have the ESLINT_USE_FLAT_CONFIG environment variable set to false. If you want to use an eslint.config.js file, remove the environment variable. If you want to find the location of the eslintrc configuration file, use the --debug flag.
+(Use `node --trace-warnings ...` to show where the warning was created)

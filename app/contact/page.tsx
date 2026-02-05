@@ -50,7 +50,7 @@ export default function ContactPage() {
                                 Informations de Contact
                             </h2>
                             <p className="font-poppins text-gray-600 mb-8">
-                                N'hésitez pas à nous contacter par téléphone, email ou WhatsApp. Nous serons ravies de répondre à vos questions et de vous accompagner.
+                                N&apos;hésitez pas à nous contacter par téléphone, email ou WhatsApp. Nous serons ravies de répondre à vos questions et de vous accompagner.
                             </p>
                         </div>
 
@@ -108,7 +108,7 @@ export default function ContactPage() {
 
                         <Card>
                             <h3 className="font-playfair text-xl font-semibold text-gray-800 mb-4">
-                                Horaires d'ouverture
+                                Horaires d&apos;ouverture
                             </h3>
                             <div className="space-y-3 font-poppins text-gray-600">
                                 <div className="flex justify-between">
