@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { staggerContainer, slideUp } from '@/lib/animations';
 import Section from '@/components/ui/Section';
@@ -29,22 +30,30 @@ export default function Services() {
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
                     {services.map((service, index) => (
                         <motion.div key={service.id} variants={slideUp}>
-                            <Card delay={index * 0.15} className="h-full flex flex-col">
-                                <div className="text-center mb-4">
-                                    <div className="text-5xl mb-4">{service.icon}</div>
-                                    <h3 className="font-playfair text-2xl font-semibold text-gray-800 mb-2">
+                            <Card delay={index * 0.15} className="h-full flex flex-col p-0 overflow-hidden border-none shadow-lg hover:shadow-xl transition-shadow duration-300">
+                                <div className="relative h-48 w-full overflow-hidden">
+                                    <Image
+                                        src={service.image}
+                                        alt={service.title}
+                                        fill
+                                        className="object-cover transition-transform duration-700 hover:scale-105"
+                                        sizes="(max-width: 768px) 100vw, 33vw"
+                                    />
+                                </div>
+                                <div className="p-6 text-center mb-4 flex-grow">
+                                    <h3 className="font-playfair text-2xl font-bold text-gray-800 mb-2">
                                         {service.title}
                                     </h3>
-                                    <p className="font-poppins text-sm text-rose-500 mb-4">
+                                    <p className="font-poppins text-sm text-gold-600 mb-4 font-medium tracking-wide uppercase">
                                         {service.subtitle}
                                     </p>
+                                    <p className="font-poppins text-gray-600 mb-6">
+                                        {service.description}
+                                    </p>
                                 </div>
-                                <p className="font-poppins text-gray-600 mb-6 flex-grow">
-                                    {service.description}
-                                </p>
-                                <div className="mt-auto">
-                                    <div className="flex items-center justify-center gap-2 text-sm text-gray-500 mb-4">
-                                        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <div className="pb-6 px-6 mt-auto">
+                                    <div className="flex items-center justify-center gap-2 text-sm text-gray-500">
+                                        <svg className="w-5 h-5 text-gold-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
                                         </svg>
                                         <span className="font-poppins">{service.duration}</span>

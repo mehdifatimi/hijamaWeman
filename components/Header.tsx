@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
 
 export default function Header() {
@@ -19,11 +20,14 @@ export default function Header() {
             <nav className="max-w-7xl mx-auto px-4 md:px-8 py-4">
                 <div className="flex items-center justify-between">
                     {/* Logo */}
-                    <Link href="/" className="flex items-center gap-2">
-                        <span className="text-2xl">🌸</span>
-                        <span className="font-playfair text-2xl font-bold text-rose-600">
-                            Hijama Femmes
-                        </span>
+                    <Link href="/" className="relative h-24 w-64">
+                        <Image
+                            src="/images/logo.png"
+                            alt="Hijama Femmes"
+                            fill
+                            className="object-contain object-left"
+                            priority
+                        />
                     </Link>
 
                     {/* Desktop Navigation */}

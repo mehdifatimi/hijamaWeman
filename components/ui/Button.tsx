@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 
 interface ButtonProps {
     children: React.ReactNode;
-    variant?: 'primary' | 'secondary' | 'whatsapp';
+    variant?: 'primary' | 'secondary' | 'whatsapp' | 'outline';
     onClick?: () => void;
     href?: string;
     className?: string;
@@ -25,7 +25,8 @@ export default function Button({
     const variantClasses = {
         primary: "bg-rose-400 text-white hover:bg-rose-500 shadow-lg hover:shadow-xl",
         secondary: "border-2 border-rose-400 text-rose-600 hover:bg-rose-50",
-        whatsapp: "bg-green-500 text-white hover:bg-green-600 shadow-lg hover:shadow-xl"
+        whatsapp: "bg-green-500 text-white hover:bg-green-600 shadow-lg hover:shadow-xl",
+        outline: "border-2 border-gray-300 text-gray-600 hover:border-rose-400 hover:text-rose-500"
     };
 
     const classes = `${baseClasses} ${variantClasses[variant]} ${className}`;

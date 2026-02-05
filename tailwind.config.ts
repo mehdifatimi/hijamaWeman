@@ -45,6 +45,18 @@ const config: Config = {
                     800: '#334035',
                     900: '#2c362e',
                 },
+                gold: {
+                    50: '#fdfbf7',
+                    100: '#f7f1e6',
+                    200: '#ecddbf',
+                    300: '#e0c493',
+                    400: '#d4a866',
+                    500: '#c68d44',
+                    600: '#aa7036',
+                    700: '#89562d',
+                    800: '#70452a',
+                    900: '#5c3a25',
+                },
             },
             fontFamily: {
                 poppins: ['var(--font-poppins)', 'sans-serif'],

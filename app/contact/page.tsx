@@ -7,6 +7,7 @@ import Section from '@/components/ui/Section';
 import Card from '@/components/ui/Card';
 import ContactForm from '@/components/ContactForm';
 import Button from '@/components/ui/Button';
+import { Phone, Mail, MapPin } from 'lucide-react';
 
 export default function ContactPage() {
     return (
@@ -56,49 +57,49 @@ export default function ContactPage() {
                         <Card>
                             <div className="space-y-6">
                                 <div className="flex items-start gap-4">
-                                    <div className="text-3xl">📱</div>
+                                    <div className="text-rose-500"><Phone size={24} /></div>
                                     <div>
                                         <h3 className="font-playfair text-lg font-semibold text-gray-800 mb-1">
                                             Téléphone
                                         </h3>
                                         <a
-                                            href="tel:+33123456789"
+                                            href="tel:+212762818313"
                                             className="font-poppins text-rose-500 hover:text-rose-600 transition-colors"
                                         >
-                                            01 23 45 67 89
+                                            07 62 81 83 13
                                         </a>
                                     </div>
                                 </div>
 
                                 <div className="flex items-start gap-4">
-                                    <div className="text-3xl">📧</div>
+                                    <div className="text-rose-500"><Mail size={24} /></div>
                                     <div>
                                         <h3 className="font-playfair text-lg font-semibold text-gray-800 mb-1">
                                             Email
                                         </h3>
                                         <a
-                                            href="mailto:contact@hijama-femmes.fr"
+                                            href="mailto:contact@hijama-femmes.com"
                                             className="font-poppins text-rose-500 hover:text-rose-600 transition-colors"
                                         >
-                                            contact@hijama-femmes.fr
+                                            contact@hijama-femmes.com
                                         </a>
                                     </div>
                                 </div>
 
                                 <div className="flex items-start gap-4">
-                                    <div className="text-3xl">📍</div>
+                                    <div className="text-rose-500"><MapPin size={24} /></div>
                                     <div>
                                         <h3 className="font-playfair text-lg font-semibold text-gray-800 mb-1">
                                             Adresse
                                         </h3>
                                         <p className="font-poppins text-gray-600">
-                                            Paris, France
+                                            Marrakech, Maroc
                                         </p>
                                     </div>
                                 </div>
 
                                 <div className="pt-4">
-                                    <Button href="https://wa.me/33123456789" variant="whatsapp" className="w-full">
+                                    <Button href="https://wa.me/212762818313" variant="whatsapp" className="w-full">
                                         Contactez-nous sur WhatsApp
                                     </Button>
                                 </div>
@@ -131,7 +132,9 @@ export default function ContactPage() {
 
                     {/* Contact Form */}
                     <div>
-                        <ContactForm />
+                        <React.Suspense fallback={<div>Chargement...</div>}>
+                            <ContactForm />
+                        </React.Suspense>
                     </div>
                 </div>
             </Section>

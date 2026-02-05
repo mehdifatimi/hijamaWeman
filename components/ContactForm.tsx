@@ -1,11 +1,13 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
+import { useSearchParams } from 'next/navigation';
 import { slideUp } from '@/lib/animations';
 import Button from '@/components/ui/Button';
 
 export default function ContactForm() {
+    const searchParams = useSearchParams();
     const [formData, setFormData] = useState({
         name: '',
         email: '',
@@ -15,6 +17,22 @@ export default function ContactForm() {
     });
 
     const [errors, setErrors] = useState<Record<string, string>>({});
+
+    useEffect(() => {
+        const serviceParam = searchParams.get('service');
+        if (serviceParam) {
+            // Convert title to value format: "Hijama Sèche" -> "hijama-seche"
+            const formattedService = serviceParam.toLowerCase()
+                .normalize("NFD").replace(/[\u0300-\u036f]/g, "") // Remove accents
+                .replace(/\s+/g, '-'); // Replace spaces with hyphens
+
+            // Check if it's a valid option
+            const validServices = ['hijama-seche', 'hijama-humide', 'hijama-relaxante'];
+            if (validServices.includes(formattedService)) {
+                setFormData(prev => ({ ...prev, service: formattedService }));
+            }
+        }
+    }, [searchParams]);
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
         const { name, value } = e.target;

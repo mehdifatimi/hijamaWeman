@@ -1,5 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
+import { Mail, Phone, MapPin } from 'lucide-react';
 
 export default function Footer() {
     const currentYear = new Date().getFullYear();
@@ -10,11 +12,13 @@ export default function Footer() {
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                     {/* Brand */}
                     <div>
-                        <div className="flex items-center gap-2 mb-4">
-                            <span className="text-2xl">🌸</span>
-                            <span className="font-playfair text-xl font-bold text-rose-600">
-                                Hijama Femmes
-                            </span>
+                        <div className="relative h-24 w-64 mb-4">
+                            <Image
+                                src="/images/logo.png"
+                                alt="Hijama Femmes"
+                                fill
+                                className="object-contain object-left"
+                            />
                         </div>
                         <p className="font-poppins text-gray-600 text-sm">
                             Centre de bien-être et de hijama thérapeutique exclusivement réservé aux femmes.
@@ -69,20 +73,20 @@ export default function Footer() {
                         </h3>
                         <ul className="space-y-2 font-poppins text-gray-600 text-sm">
                             <li className="flex items-center gap-2">
-                                <span>📧</span>
+                                <span className="text-rose-500"><Mail size={16} /></span>
                                 <a href="mailto:contact@hijama-femmes.fr" className="hover:text-rose-600 transition-colors">
-                                    contact@hijama-femmes.fr
+                                    contact@hijama-femmes.com
                                 </a>
                             </li>
                             <li className="flex items-center gap-2">
-                                <span>📱</span>
+                                <span className="text-rose-500"><Phone size={16} /></span>
                                 <a href="tel:+33123456789" className="hover:text-rose-600 transition-colors">
-                                    01 23 45 67 89
+                                    o762818313
                                 </a>
                             </li>
                             <li className="flex items-center gap-2">
-                                <span>📍</span>
-                                <span>Paris, France</span>
+                                <span className="text-rose-500"><MapPin size={16} /></span>
+                                <span className="text-gray-600">marrakech, Maroc</span>
                             </li>
                         </ul>
                     </div>
