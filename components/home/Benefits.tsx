@@ -27,14 +27,14 @@ export default function Benefits() {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {benefits.map((benefit, index) => (
-                        <motion.div key={benefit.id} variants={slideUp}>
-                            <Card delay={index * 0.1}>
-                                <div className="text-center">
-                                    <div className="text-5xl mb-4">{benefit.icon}</div>
+                        <motion.div key={benefit.id} variants={slideUp} className="h-full">
+                            <Card delay={index * 0.1} className="h-full">
+                                <div className="text-center h-full flex flex-col">
+                                    <div className="mb-4">{benefit.icon}</div>
                                     <h3 className="font-playfair text-xl font-semibold text-gray-800 mb-3">
                                         {benefit.title}
                                     </h3>
-                                    <p className="font-poppins text-gray-600">
+                                    <p className="font-poppins text-gray-600 flex-grow">
                                         {benefit.description}
                                     </p>
                                 </div>

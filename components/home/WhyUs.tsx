@@ -27,14 +27,14 @@ export default function WhyUs() {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {whyUsItems.map((item, index) => (
-                        <motion.div key={item.id} variants={slideUp}>
-                            <Card delay={index * 0.1}>
-                                <div className="text-center">
-                                    <div className="text-5xl mb-4">{item.icon}</div>
+                        <motion.div key={item.id} variants={slideUp} className="h-full">
+                            <Card delay={index * 0.1} className="h-full">
+                                <div className="text-center h-full flex flex-col">
+                                    <div className="mb-4">{item.icon}</div>
                                     <h3 className="font-playfair text-xl font-semibold text-gray-800 mb-3">
                                         {item.title}
                                     </h3>
-                                    <p className="font-poppins text-gray-600">
+                                    <p className="font-poppins text-gray-600 flex-grow">
                                         {item.description}
                                     </p>
                                 </div>
