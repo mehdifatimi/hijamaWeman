@@ -76,18 +76,46 @@ export default function ContactForm() {
         e.preventDefault();
 
         if (validate()) {
-            // Here you would typically send the form data to your backend
-            console.log('Form submitted:', formData);
-            alert('Merci pour votre message ! Nous vous contacterons bientôt.');
+            // Format service name for display
+            const serviceNames: Record<string, string> = {
+                'hijama-seche': 'Hijama Sèche',
+                'hijama-humide': 'Hijama Humide',
+                'hijama-relaxante': 'Hijama Relaxante'
+            };
 
-            // Reset form
-            setFormData({
-                name: '',
-                email: '',
-                phone: '',
-                service: '',
-                message: ''
-            });
+            // Create WhatsApp message with all form information
+            const whatsappMessage = `🌸 *Nouvelle Demande de Rendez-vous* 🌸
+
+👤 *Nom:* ${formData.name}
+📧 *Email:* ${formData.email}
+📱 *Téléphone:* ${formData.phone}
+💆‍♀️ *Service souhaité:* ${serviceNames[formData.service] || formData.service}
+
+💬 *Message:*
+${formData.message}`;
+
+            // Encode the message for URL
+            const encodedMessage = encodeURIComponent(whatsappMessage);
+
+            // WhatsApp number (remove + and spaces)
+            const whatsappNumber = '212762818313';
+
+            // Create WhatsApp URL
+            const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+
+            // Open WhatsApp in new tab
+            window.open(whatsappUrl, '_blank');
+
+            // Reset form after a short delay
+            setTimeout(() => {
+                setFormData({
+                    name: '',
+                    email: '',
+                    phone: '',
+                    service: '',
+                    message: ''
+                });
+            }, 500);
         }
     };
 

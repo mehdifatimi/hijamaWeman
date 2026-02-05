@@ -43,7 +43,7 @@ export default function Hero() {
                         <Button href="/contact" variant="primary">
                             Prendre Rendez-vous
                         </Button>
-                        <Button href="https://wa.me/33123456789" variant="whatsapp">
+                        <Button href="https://wa.me/212762818313" variant="whatsapp">
                             WhatsApp
                         </Button>
                     </motion.div>
